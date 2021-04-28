@@ -1,0 +1,122 @@
+* {
+  box-sizing: box-border;  /* Conversion from content box to border box */
+}
+
+body {       /* structure for entire mockup */
+  margin: 0px;
+  padding: 0px;
+  font: poppins; /* default font for the entire setup webpage */
+}
+
+#main {  /* It is id */
+  width: 100%;
+  height: 20vh;
+  position: relative;  /* relative: to the entire screen */
+}
+
+nav {                 
+  display: flex;   /* to have content spaced across the nav section  that is the logo, meny tag and say hi part  */
+  justify-content: space-around; /* command to space it */
+  align-items: center;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 5px 10px 30px rgba(0 ,0 ,0 ,0.02); 
+  z-index:1;  
+}
+
+.logo img{ /* access the image tag of that particular class */
+  height: 110px;  
+}
+
+.menu{
+  list-style: none;  
+  display: flex; 
+}
+
+.menu li a{
+  height: 40px;
+  line-height: 43px;
+  margin: 3px;
+  padding: 0px 22px;
+  display: flex;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: gray;
+}
+
+a {
+  text-decoration: none; 
+}
+
+.hey {
+  color: #39bfbd;
+  font-weight: 500;
+  font-size: 0.9em;
+  border-bottom: 2px solid #39bfbd;
+}
+
+.image {   /* image specification */
+  width: 500px;
+  height: 500px;
+}
+
+.image img{ 
+  width: 100%;
+  height:100%;
+  object-fit: contain; /*we dont want to overflow the entire thing but want to contained it into the image class itself*/  
+}
+
+.content {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+  align-items: center; /*we want all should be in center*/
+  position: absolute; /*we are taking absolute with respect to the screen*/
+  left: 3%;
+  right: 50%;
+  translate: (-50%, -50%);
+}
+
+.main-text {
+  width: 500px;
+}
+
+.main-text h1 {
+  font-size: 3.5em;
+  color:#1c3548;
+  margin: 0px 0px 10px 0px;
+  line-height: 60px;
+}
+
+.main-text p {
+  color: gray;
+}
+
+.resume-btn {
+  width: 190px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #1db096;
+  border-radius: 20px; /*to make the button rounded from both the end*/
+  box-shadow: 5px 10px 30px  rgba(24, 139, 119, 0.2); /*for the 3d look of button*/
+}
+/*resume-btn:hover = this means that resume-btn is in a hover state*/
+.resume-btn:hover {  /*when we are hovering over the button it will change the color a little bit or a animation basically*/
+  background-color: #23cdaf;
+  transition: all ease 0.2s;
+}
+
+.menu li a:hover {
+  background-color: #23cdaf;
+  color: white;
+  box-shadow: 5px 10px 30px  rgba(24, 139, 119, 0.2);
+  transition: all ease 0.2s;
+}
